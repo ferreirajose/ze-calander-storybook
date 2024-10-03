@@ -13,20 +13,20 @@
 .datetime-calendar.bootstrap-style .calendar-header {
     padding: 15px;
     border-bottom: 1px solid #dee2e6;
-    background-color: #f8f9fa;
+    background-color: #0d6efd;
     border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .datetime-calendar.bootstrap-style .current-date {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #212529;
+    color: #fff;
 }
 
 .datetime-calendar.bootstrap-style .today {
     border-radius: 0.25rem;
     margin-right: 20px;
-    background-color: #0d6efd;
+    background-color: #6c757d;
     padding: 10px 20px;
     color: #fff;
     cursor: pointer;
@@ -97,11 +97,15 @@
     text-align: center;
 }
 
+.datetime-calendar.bootstrap-style .calendar-day-wrapper .calendar-day {
+  border-radius: 0.25rem;
+}
+
 .datetime-calendar.bootstrap-style .calendar-day-wrapper.active .calendar-day {
     color: #fff;
     background-color: #0d6efd;
     border: 2px solid #0d6efd;
-    border-radius: 50%;
+    border-radius:  0.25rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 

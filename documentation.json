@@ -318,7 +318,7 @@
         },
         {
             "name": "CalendarComponent",
-            "id": "component-CalendarComponent-d6e334d4bdb7dbbaedab64f2fe232d4c748d370965e221664afe5153b89010025f573d8fa7a2a92174c5c0130fcdb3b7b6da5aee4a7009d7254622a7b3cfa087",
+            "id": "component-CalendarComponent-d6563d94db5baf10094adf1238a430e00efe0c2086f06a9338970b5d1ed7b1724b48403e59d37af44e74b4a923eea91fb709162ff85bd9a666df4d208b23bbf3",
             "file": "src/app/calendar/calendar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -336,6 +336,15 @@
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
+                {
+                    "name": "language",
+                    "defaultValue": "'en-US'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
                 {
                     "name": "listEventMonth",
                     "defaultValue": "[]",
@@ -357,11 +366,11 @@
             ],
             "outputsClass": [
                 {
-                    "name": "monthChanged",
+                    "name": "currentDay",
                     "defaultValue": "new EventEmitter<Date>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "EventEmitter"
                 }
             ],
@@ -374,7 +383,7 @@
                     "type": "Date",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 16
                 },
                 {
                     "name": "currentMonth",
@@ -384,7 +393,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 19
+                    "line": 18
                 },
                 {
                     "name": "currentMonthName",
@@ -394,7 +403,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 19
                 },
                 {
                     "name": "currentYear",
@@ -404,7 +413,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 17
                 },
                 {
                     "name": "daysInMonth",
@@ -414,48 +423,30 @@
                     "type": "any[]",
                     "optional": false,
                     "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "daysOfWeek",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
                     "line": 21
                 },
                 {
                     "name": "months",
-                    "defaultValue": "[\n    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'\n  ]",
+                    "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string[]",
                     "optional": false,
                     "description": "",
                     "line": 23
-                },
-                {
-                    "name": "prevNextIcon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "ElementRef",
-                    "optional": true,
-                    "description": "",
-                    "line": 15,
-                    "decorators": [
-                        {
-                            "name": "ViewChild",
-                            "stringifiedArguments": "'nextPrev', {read: ElementRef, static: false}"
-                        }
-                    ],
-                    "modifierKind": [
-                        170
-                    ]
                 }
             ],
             "methodsClass": [
-                {
-                    "name": "emitMonthChange",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 105,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
                 {
                     "name": "getEventStyle",
                     "args": [
@@ -469,7 +460,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 110,
+                    "line": 141,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -485,12 +476,22 @@
                     ]
                 },
                 {
+                    "name": "getLocalizedMonths",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string[]",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
                     "name": "goToToday",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 97,
+                    "line": 133,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -507,7 +508,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 46,
+                    "line": 81,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -535,7 +536,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 34,
+                    "line": 69,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -556,7 +557,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 89,
+                    "line": 125,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -566,7 +567,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 29,
+                    "line": 27,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -576,7 +577,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 93,
+                    "line": 129,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -586,9 +587,103 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 59,
+                    "line": 94,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "renderDaysOfWeek",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setLocale",
+                    "args": [
+                        {
+                            "name": "locale",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "locale",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "trackByMonth",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "trackByWeek",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -600,11 +695,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';\n\n@Component({\n  selector: 'ze-calendar',\n  templateUrl: './calendar.component.html',\n  styleUrls: ['./calendar.component.css'] // Inclua um estilo padrão mínimo se necessário\n})\nexport class CalendarComponent implements OnInit {\n\n  @Input() listEventMonth: { date: string, textColor: string, backgroundColor?: string, border?: string }[] = [];\n  @Input() style: 'bootstrap' | 'material' | 'tce' | 'default' = 'default'; // Estilo como string\n  @Output() monthChanged = new EventEmitter<Date>();\n\n  @ViewChild('nextPrev', { read: ElementRef, static: false }) prevNextIcon?: ElementRef;\n\n  currentDate: Date = new Date();\n  currentYear: number = this.currentDate.getFullYear();\n  currentMonth: number = this.currentDate.getMonth();\n  currentMonthName: string = '';\n  daysInMonth: any[] = [];\n\n  months: string[] = [\n    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'\n  ];\n\n  constructor(private renderer: Renderer2) {}\n\n  ngOnInit() {\n    this.loadStyle(this.style);\n    this.renderCalendar();\n  }\n\n  navigateMonth(direction: string): void {\n    this.currentMonth = direction === 'prev' ? this.currentMonth - 1 : this.currentMonth + 1;\n    if (this.currentMonth < 0 || this.currentMonth > 11) {\n      this.currentDate = new Date(this.currentYear, this.currentMonth);\n      this.currentYear = this.currentDate.getFullYear();\n      this.currentMonth = this.currentDate.getMonth();\n    } else {\n      this.currentDate = new Date();\n    }\n    this.renderCalendar();\n  }\n\n  loadStyle(style: string) {\n    const styleElementId = 'dynamic-theme';\n    const existingStyleElement = document.getElementById(styleElementId);\n    if (existingStyleElement) {\n      this.renderer.removeChild(document.head, existingStyleElement);\n    }\n    const link = this.renderer.createElement('link');\n    link.id = styleElementId;\n    link.rel = 'stylesheet';\n    link.href = `assets/style/${style}.css`;\n    this.renderer.appendChild(document.head, link);\n  }\n\n  renderCalendar() {\n    this.currentMonthName = this.months[this.currentMonth];\n    const firstDateOfMonth = new Date(this.currentYear, this.currentMonth, 1).getDay();\n    const lastDateOfMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();\n    const lastDateOfLastMonth = new Date(this.currentYear, this.currentMonth, 0).getDate();\n    this.daysInMonth = [];\n\n    // Dias do mês anterior\n    for (let i = firstDateOfMonth; i > 0; i--) {\n      this.daysInMonth.push({ day: lastDateOfLastMonth - i + 1, classStyle: 'inactive', date: new Date(this.currentYear, this.currentMonth - 1, lastDateOfLastMonth - i + 1) });\n    }\n\n    // Dias do mês atual\n    for (let i = 1; i <= lastDateOfMonth; i++) {\n      let isToday = i === this.currentDate.getDate() && this.currentMonth === new Date().getMonth() && this.currentYear === new Date().getFullYear() ? 'active' : '';\n      let fullDate = `${this.currentYear}-${(this.currentMonth + 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`;\n\n      // Get event style for each day in the current month\n      const eventStyles = this.getEventStyle(new Date(fullDate));\n\n      this.daysInMonth.push({ day: i, classStyle: isToday, date: new Date(this.currentYear, this.currentMonth, i), styles: eventStyles });\n    }\n\n    // Dias do próximo mês\n    const remainingDays = 6 - new Date(this.currentYear, this.currentMonth, lastDateOfMonth).getDay();\n    for (let i = 1; i <= remainingDays; i++) {\n      this.daysInMonth.push({ day: i, classStyle: 'inactive', date: new Date(this.currentYear, this.currentMonth + 1, i) });\n    }\n  }\n\n  nextMonth() {\n    this.emitMonthChange();\n  }\n\n  prevMonth() {\n    this.emitMonthChange();\n  }\n\n  goToToday() {\n    this.currentDate = new Date();\n    this.currentYear = this.currentDate.getFullYear();\n    this.currentMonth = this.currentDate.getMonth();\n    this.emitMonthChange();\n    this.renderCalendar();\n  }\n\n  emitMonthChange() {\n    const selectedDate = new Date(this.currentYear, this.currentMonth, 1);\n    this.monthChanged.emit(selectedDate);\n  }\n\n  getEventStyle(date: Date): any {\n    const event = this.listEventMonth.find(event => new Date(event.date).toDateString() === date.toDateString());\n    if (event) {\n      return {\n        textColor: event.textColor,\n        backgroundColor: event.backgroundColor || '',\n        border: event.border || ''\n      };\n    }\n    return {};\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter, OnInit, Renderer2, ViewChild, ElementRef, Inject, LOCALE_ID } from '@angular/core';\r\nimport { formatDate } from '@angular/common'; // Para formatar as datas corretamente com base no locale\r\n\r\n@Component({\r\n  selector: 'ze-calendar',\r\n  templateUrl: './calendar.component.html',\r\n  styleUrls: ['./calendar.component.css']\r\n})\r\nexport class CalendarComponent implements OnInit {\r\n\r\n  @Input() listEventMonth: { date: string, textColor: string, backgroundColor?: string, border?: string }[] = [];\r\n  @Input() style: 'bootstrap' | 'material' | 'tce' | 'default' = 'default'; // Estilo como string\r\n  @Input() language: string = 'en-US'; // Novo input para definir o idioma\r\n  @Output() currentDay = new EventEmitter<Date>();\r\n\r\n  currentDate: Date = new Date();\r\n  currentYear: number = this.currentDate.getFullYear();\r\n  currentMonth: number = this.currentDate.getMonth();\r\n  currentMonthName: string = '';\r\n  daysInMonth: any[] = [];\r\n  daysOfWeek: string[] = []; // Dias da semana traduzidos\r\n\r\n  months: string[] = [];\r\n\r\n  constructor(private renderer: Renderer2, @Inject(LOCALE_ID) private locale: string) {}\r\n\r\n  ngOnInit() {\r\n    this.setLocale(this.language); // Ajusta o locale baseado no input\r\n    this.loadStyle(this.style);\r\n    this.renderCalendar();\r\n    this.renderDaysOfWeek(); // Traduz os dias da semana ao iniciar\r\n  }\r\n\r\n  trackByWeek(index: number) {\r\n    return index;\r\n  }\r\n\r\n  trackByMonth(index: number) {\r\n    return index;\r\n  }\r\n\r\n  // Função para ajustar o locale e os nomes dos meses com base no idioma\r\n  setLocale(locale: string) {\r\n    this.locale = locale;\r\n    this.months = this.getLocalizedMonths(); // Pega os meses no idioma certo\r\n  }\r\n\r\n  // Função para obter os meses com base no idioma\r\n  getLocalizedMonths(): string[] {\r\n    const date = new Date(2024, 0, 1); // Exemplo de data para pegar o mês\r\n    const monthsLocalized: string[] = [];\r\n    for (let i = 0; i < 12; i++) {\r\n      date.setMonth(i);\r\n      monthsLocalized.push(formatDate(date, 'LLLL', this.locale)); // 'LLLL' é o formato de mês por extenso\r\n    }\r\n    return monthsLocalized;\r\n  }\r\n\r\n  // Função para traduzir os dias da semana\r\n  renderDaysOfWeek() {\r\n    const date = new Date();\r\n    this.daysOfWeek = [];\r\n    for (let i = 0; i < 7; i++) {\r\n      date.setDate(i + 3); // Ajusta o dia da semana\r\n      this.daysOfWeek.push(formatDate(date, 'EEE', this.locale)); // 'EEE' é o formato curto para dias da semana\r\n    }\r\n  }\r\n\r\n  navigateMonth(direction: string): void {\r\n    this.currentMonth = direction === 'prev' ? this.currentMonth - 1 : this.currentMonth + 1;\r\n    if (this.currentMonth < 0 || this.currentMonth > 11) {\r\n      this.currentDate = new Date(this.currentYear, this.currentMonth);\r\n      this.currentYear = this.currentDate.getFullYear();\r\n      this.currentMonth = this.currentDate.getMonth();\r\n    } else {\r\n      this.currentDate = new Date();\r\n    }\r\n    this.renderCalendar();\r\n  }\r\n\r\n  loadStyle(style: string) {\r\n    const styleElementId = 'dynamic-theme';\r\n    const existingStyleElement = document.getElementById(styleElementId);\r\n    if (existingStyleElement) {\r\n      this.renderer.removeChild(document.head, existingStyleElement);\r\n    }\r\n    const link = this.renderer.createElement('link');\r\n    link.id = styleElementId;\r\n    link.rel = 'stylesheet';\r\n    link.href = `assets/style/${style}.css`;\r\n    this.renderer.appendChild(document.head, link);\r\n  }\r\n\r\n  renderCalendar() {\r\n    this.currentMonthName = this.months[this.currentMonth]; // Traduz o nome do mês baseado no locale\r\n    const firstDateOfMonth = new Date(this.currentYear, this.currentMonth, 1).getDay();\r\n    const lastDateOfMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();\r\n    const lastDateOfLastMonth = new Date(this.currentYear, this.currentMonth, 0).getDate();\r\n    this.daysInMonth = [];\r\n\r\n    // Dias do mês anterior\r\n    for (let i = firstDateOfMonth; i > 0; i--) {\r\n      this.daysInMonth.push({ day: lastDateOfLastMonth - i + 1, classStyle: 'inactive', date: new Date(this.currentYear, this.currentMonth - 1, lastDateOfLastMonth - i + 1) });\r\n    }\r\n\r\n    // Dias do mês atual\r\n    for (let i = 1; i <= lastDateOfMonth; i++) {\r\n      let isToday = i === this.currentDate.getDate() && this.currentMonth === new Date().getMonth() && this.currentYear === new Date().getFullYear() ? 'active' : '';\r\n      let fullDate = `${this.currentYear}-${(this.currentMonth + 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`;\r\n\r\n      // Get event style for each day in the current month\r\n      const eventStyles = this.getEventStyle(new Date(fullDate));\r\n\r\n      this.daysInMonth.push({ day: i, classStyle: isToday, date: new Date(this.currentYear, this.currentMonth, i), styles: eventStyles });\r\n    }\r\n\r\n    // Dias do próximo mês\r\n    const remainingDays = 6 - new Date(this.currentYear, this.currentMonth, lastDateOfMonth).getDay();\r\n    for (let i = 1; i <= remainingDays; i++) {\r\n      this.daysInMonth.push({ day: i, classStyle: 'inactive', date: new Date(this.currentYear, this.currentMonth + 1, i) });\r\n    }\r\n  }\r\n\r\n  //#TODO IMPLEMENTAR METODO QUANDO nextMonth FOR CHAMADO\r\n  nextMonth() {\r\n  }\r\n\r\n  //#TODO IMPLEMENTAR METODO QUANDO prevMonth FOR CHAMADO\r\n  prevMonth() {\r\n\r\n  }\r\n\r\n  goToToday() {\r\n    this.currentDate = new Date();\r\n    this.currentYear = this.currentDate.getFullYear();\r\n    this.currentMonth = this.currentDate.getMonth();\r\n    this.currentDay.emit(new Date());\r\n    this.renderCalendar();\r\n  }\r\n\r\n  getEventStyle(date: Date): any {\r\n    const event = this.listEventMonth.find(event => new Date(event.date).toDateString() === date.toDateString());\r\n    if (event) {\r\n      return {\r\n        textColor: event.textColor,\r\n        backgroundColor: event.backgroundColor || '',\r\n        border: event.border || ''\r\n      };\r\n    }\r\n    return {};\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.datetime-calendar {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex: 1 1 auto;\r\n  flex: 1 1 auto;\r\n  -ms-flex-flow: column;\r\n  flex-flow: column;\r\n}\r\n\r\n.calendar-action-buttons {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-pack: justify;\r\n  justify-content: space-between;\r\n}\r\n\r\n.calendar-days-of-week {\r\n  display: grid;\r\n  grid-template-columns: repeat(7, 1fr);\r\n  text-align: center;\r\n}\r\n\r\n.calendar-days-of-week {\r\n  -webkit-padding-start: 10px;\r\n  padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n  padding-inline-end: 10px;\r\n  padding-top: 0px;\r\n  padding-bottom: 0px;\r\n  color:  gray;\r\n  font-size: 0.875rem;\r\n  line-height: 36px;\r\n  margin: 10px 0 15px;\r\n}\r\n\r\n.calendar-days-of-week .day-of-week {\r\n  -webkit-margin-start: auto;\r\n  margin-inline-start: auto;\r\n  -webkit-margin-end: auto;\r\n  margin-inline-end: auto;\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n.calendar-body {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-positive: 1;\r\n  flex-grow: 1;\r\n  -webkit-scroll-snap-type: x mandatory;\r\n  -ms-scroll-snap-type: x mandatory;\r\n  scroll-snap-type: x mandatory;\r\n  overflow-x: scroll;\r\n  overflow-y: hidden;\r\n  scrollbar-width: none;\r\n  outline: none;\r\n}\r\n\r\n.calendar-month {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-flow: column;\r\n  flex-flow: column;\r\n  scroll-snap-align: start;\r\n  scroll-snap-stop: always;\r\n  -ms-flex-negative: 0;\r\n  flex-shrink: 0;\r\n  width: 100%;\r\n}\r\n\r\n.calendar-body .calendar-month .calendar-month-grid {\r\n  -webkit-padding-start: 10px;\r\n  padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n  padding-inline-end: 10px;\r\n  padding-top: 4px;\r\n  padding-bottom: 4px;\r\n  grid-template-rows: repeat(5, 1fr);\r\n}\r\n\r\n.calendar-body .calendar-month-grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(7, 1fr);\r\n}\r\n\r\n.calendar-day-wrapper {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-align: center;\r\n  align-items: center;\r\n  -ms-flex-pack: center;\r\n  justify-content: center;\r\n  min-width: 0;\r\n  min-height: 60px;\r\n  overflow: visible;\r\n}\r\n\r\n.calendar-day {\r\n  width: 42px;\r\n  min-width: 42px;\r\n  height: 42px;\r\n  font-size: 0.875rem;\r\n  border-radius: 50%;\r\n  -webkit-padding-start: 0px;\r\n  padding-inline-start: 0px;\r\n  -webkit-padding-end: 0px;\r\n  padding-inline-end: 0px;\r\n  padding-top: 0px;\r\n  padding-bottom: 0px;\r\n  -webkit-margin-start: 0px;\r\n  margin-inline-start: 0px;\r\n  -webkit-margin-end: 0px;\r\n  margin-inline-end: 0px;\r\n  margin-top: 0px;\r\n  margin-bottom: 0px;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  position: relative;\r\n  -ms-flex-align: center;\r\n  align-items: center;\r\n  -ms-flex-pack: center;\r\n  justify-content: center;\r\n  border: none;\r\n  outline: none;\r\n  background: none;\r\n  cursor: pointer;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  appearance: none;\r\n  z-index: 0;\r\n}\r\n\r\n.calendar-day-wrapper.inactive {\r\n  color: #ced4da; /* Cor cinza para dias inativos */\r\n}\r\n",
+                    "data": "@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.datetime-calendar {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex: 1 1 auto;\r\n  flex: 1 1 auto;\r\n  -ms-flex-flow: column;\r\n  flex-flow: column;\r\n}\r\n\r\n.calendar-action-buttons {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-pack: justify;\r\n  justify-content: space-between;\r\n}\r\n\r\n.calendar-days-of-week {\r\n  display: grid;\r\n  grid-template-columns: repeat(7, 1fr);\r\n  text-align: center;\r\n}\r\n\r\n.calendar-days-of-week {\r\n  -webkit-padding-start: 10px;\r\n  padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n  padding-inline-end: 10px;\r\n  padding-top: 0px;\r\n  padding-bottom: 0px;\r\n  color:  gray;\r\n  font-size: 0.875rem;\r\n  line-height: 36px;\r\n  margin: 10px 0 15px;\r\n}\r\n\r\n.calendar-days-of-week .day-of-week {\r\n  -webkit-margin-start: auto;\r\n  margin-inline-start: auto;\r\n  -webkit-margin-end: auto;\r\n  margin-inline-end: auto;\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n}\r\n\r\n.calendar-body {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-positive: 1;\r\n  flex-grow: 1;\r\n  -webkit-scroll-snap-type: x mandatory;\r\n  -ms-scroll-snap-type: x mandatory;\r\n  scroll-snap-type: x mandatory;\r\n  overflow-x: scroll;\r\n  overflow-y: hidden;\r\n  scrollbar-width: none;\r\n  outline: none;\r\n}\r\n\r\n.calendar-month {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-flow: column;\r\n  flex-flow: column;\r\n  scroll-snap-align: start;\r\n  scroll-snap-stop: always;\r\n  -ms-flex-negative: 0;\r\n  flex-shrink: 0;\r\n  width: 100%;\r\n}\r\n\r\n.calendar-body .calendar-month .calendar-month-grid {\r\n  -webkit-padding-start: 10px;\r\n  padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n  padding-inline-end: 10px;\r\n  padding-top: 4px;\r\n  padding-bottom: 4px;\r\n  grid-template-rows: repeat(5, 1fr);\r\n}\r\n\r\n.calendar-body .calendar-month-grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(7, 1fr);\r\n}\r\n\r\n.calendar-day-wrapper {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-align: center;\r\n  align-items: center;\r\n  -ms-flex-pack: center;\r\n  justify-content: center;\r\n  min-width: 0;\r\n  min-height: 60px;\r\n  overflow: visible;\r\n}\r\n\r\n.calendar-day {\r\n  width: 42px;\r\n  min-width: 42px;\r\n  height: 42px;\r\n  font-size: 0.875rem;\r\n  border-radius: 50%;\r\n  -webkit-padding-start: 0px;\r\n  padding-inline-start: 0px;\r\n  -webkit-padding-end: 0px;\r\n  padding-inline-end: 0px;\r\n  padding-top: 0px;\r\n  padding-bottom: 0px;\r\n  -webkit-margin-start: 0px;\r\n  margin-inline-start: 0px;\r\n  -webkit-margin-end: 0px;\r\n  margin-inline-end: 0px;\r\n  margin-top: 0px;\r\n  margin-bottom: 0px;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  position: relative;\r\n  -ms-flex-align: center;\r\n  align-items: center;\r\n  -ms-flex-pack: center;\r\n  justify-content: center;\r\n  border: none;\r\n  outline: none;\r\n  background: none;\r\n  cursor: pointer;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  appearance: none;\r\n  z-index: 0;\r\n}\r\n\r\n.calendar-day-wrapper.inactive {\r\n  color: #ced4da; /* Cor cinza para dias inativos */\r\n}\r\n",
                     "styleUrl": "./calendar.component.css"
                 }
             ],
@@ -620,13 +715,28 @@
                         "type": "Renderer2",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "locale",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 25,
+                "line": 23,
                 "jsdoctags": [
                     {
                         "name": "renderer",
                         "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "locale",
+                        "type": "string",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -639,7 +749,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "\n<div [ngClass]=\"{\n    'datetime-calendar': true,\n    'bootstrap-style': style === 'bootstrap',\n    'material-style': style === 'material',\n    'tce-style': style === 'tce',\n    'default-style': style === 'default'\n  }\" class=\"datetime-calendar\">\n    <div class=\"calendar-header\">\n        <div class=\"calendar-action-buttons\" >\n            <div class=\"calendar-month-year\">\n                <p data-test=\"current-date\" data-test=\"current-date\" class=\"current-date\">{{ currentMonthName }} {{ currentYear }}</p>\n            </div>\n\n            <div class=\"calendar-today today\" (click)=\"goToToday()\">\n                <p class=\"today-text\">Hoje</p>\n                <span class=\"material-symbols-rounded\">calendar_today</span>\n            </div>\n\n            <div #nextPrev class=\"calendar-next-prev\" data-test=\"icons\">\n                <span id=\"prev\" (click)=\"navigateMonth('prev')\" class=\"nav material-symbols-rounded\">chevron_left</span>\n                <span id=\"next\" (click)=\"navigateMonth('next')\" class=\"nav material-symbols-rounded\">chevron_right</span>\n            </div>\n        </div>\n\n    </div>\n\n    <div class=\"calendar-days-of-week\">\n        <div class=\"day-of-week\">Sum</div>\n        <div class=\"day-of-week\">Mon</div>\n        <div class=\"day-of-week\">Tue</div>\n        <div class=\"day-of-week\">Wed</div>\n        <div class=\"day-of-week\">Thu</div>\n        <div class=\"day-of-week\">Fri</div>\n        <div class=\"day-of-week\">Sat</div>\n    </div>\n    <div class=\"calendar-body\">\n      <div class=\"calendar-month\">\n          <div class=\"calendar-month-grid\">\n            <div class=\"calendar-day-wrapper\"\n              [ngClass]=\"day.classStyle\"\n              *ngFor=\"let day of daysInMonth\">\n              <span class=\"calendar-day\" [ngStyle]=\"day.styles\">\n                {{ day.day }}\n              </span>\n            </div>\n          </div>\n      </div>\n  </div>\n\n</div>\n"
+            "templateData": "\n<div [ngClass]=\"{\n  'datetime-calendar': true,\n  'bootstrap-style': style === 'bootstrap',\n  'material-style': style === 'material',\n  'tce-style': style === 'tce',\n  'default-style': style === 'default'\n}\" class=\"datetime-calendar\">\n  <div class=\"calendar-header\">\n      <div class=\"calendar-action-buttons\" >\n          <div class=\"calendar-month-year\">\n              <p data-test=\"current-date\" data-test=\"current-date\" class=\"current-date\">{{ currentMonthName }} {{ currentYear }}</p>\n          </div>\n\n          <div class=\"calendar-today today\" (click)=\"goToToday()\">\n              <p class=\"today-text\">Hoje</p>\n              <span class=\"material-symbols-rounded\">calendar_today</span>\n          </div>\n\n          <div #nextPrev class=\"calendar-next-prev\" data-test=\"icons\">\n              <span id=\"prev\" (click)=\"navigateMonth('prev')\" class=\"nav material-symbols-rounded\">chevron_left</span>\n              <span id=\"next\" (click)=\"navigateMonth('next')\" class=\"nav material-symbols-rounded\">chevron_right</span>\n          </div>\n      </div>\n\n  </div>\n\n  <!-- Dias da Semana Traduzidos -->\n  <div class=\"calendar-days-of-week\">\n    <div class=\"day-of-week\" *ngFor=\"let day of daysOfWeek; trackBy: trackByWeek\">{{ day }}</div>\n  </div>\n\n  <div class=\"calendar-body\">\n    <div class=\"calendar-month\">\n        <div class=\"calendar-month-grid\">\n          <div class=\"calendar-day-wrapper\"\n            [ngClass]=\"day.classStyle\"\n            *ngFor=\"let day of daysInMonth; trackBy: trackByMonth\">\n            <span class=\"calendar-day\" [ngStyle]=\"day.styles\">\n              {{ day.day }}\n            </span>\n          </div>\n        </div>\n    </div>\n</div>\n\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -824,13 +934,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-45ce3d88ab7acafb0da367b814a62a7bf11afdb1941bbaa7da489033cbe5d41533744573d2eb8382afbd837644fc831f195438126c9348bf1026efe9cc4b3636",
+            "id": "module-AppModule-7702d1928c60b89c72da7dd94f7c3e3ea9b012bffc24e7f9179018b275467f6a86bbb3f12d979addace2d70a0b79e67a988f4f461deceb469220d669e0d36141",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ButtonsComponent } from './buttons/buttons.component';\nimport { CalendarComponent } from './calendar/calendar.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonsComponent,\n    CalendarComponent\n   ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { registerLocaleData } from '@angular/common';\r\nimport localePt from '@angular/common/locales/pt';\r\n\r\nimport { LOCALE_ID, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { ButtonsComponent } from './buttons/buttons.component';\r\nimport { CalendarComponent } from './calendar/calendar.component';\r\n\r\nregisterLocaleData(localePt, 'pt-BR');\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonsComponent,\r\n    CalendarComponent\r\n   ],\r\n  imports: [\r\n    BrowserModule\r\n  ],\r\n  providers: [\r\n    {\r\n      provide: LOCALE_ID,\r\n      useValue: 'pt-BR', // Defina o idioma padrão\r\n    }\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -903,7 +1013,7 @@
                 "linktype": "component",
                 "name": "CalendarComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/21",
+                "coverageCount": "0/26",
                 "status": "low"
             },
             {
