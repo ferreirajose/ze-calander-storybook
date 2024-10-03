@@ -25,7 +25,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/style/bootstrap.css",
+              "src/assets/style/tce.css",
+              "src/assets/style/material.css"
             ],
             "scripts": []
           },
@@ -91,8 +94,41 @@
             ],
             "scripts": []
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "storybook:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "."
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "storybook:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "."
+            ],
+            "outputDir": "storybook-static"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7c4b9284-50fa-445a-ac16-987ae5d9a84d"
   }
 }

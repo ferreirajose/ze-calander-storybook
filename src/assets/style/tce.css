@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+}
+
+.datetime-calendar {
+    border: 1px solid #CBD5E1;
+    border-radius: 0.25rem;
+}
+
+.datetime-calendar.tce-style .calendar-header {
+    padding: 13px 15px;
+    border-bottom: 2px solid #CBD5E1;
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.datetime-calendar.tce-style .current-date {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+
+.datetime-calendar.tce-style .today {
+    border-radius: 0.25rem; /* Borda arredondada, padrão do Bootstrap */
+    margin-right: 20px;
+    background-color: #0EA5E9;
+    padding: 14px 12px;
+    color: #000;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.datetime-calendar.tce-style .today span{
+    display: none;
+}
+
+.datetime-calendar.tce-style .calendar-next-prev span {
+    width: 36px;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #3B82F6; /* Cor secundária do Bootstrap */
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.datetime-calendar.tce-style #prev {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.datetime-calendar.tce-style #next {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.datetime-calendar.tce-style .calendar-action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .datetime-calendar.tce-style .calendar-month-year,
+  .calendar-today,
+  .calendar-next-prev {
+    display: flex;
+    align-items: center;
+  }
+
+  .datetime-calendar.tce-style  .calendar-days-of-week .day-of-week{
+    color: #1E293B;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+  }
+
+/*
+.datetime-calendar.tce-style  .calendar-day-wrapper.inactive:hover {
+    background-color: transparent;
+} */
+
+.datetime-calendar.tce-style  .calendar-day-wrapper.active .calendar-day {
+    color: #000;
+    border: 2px solid #007bff; /* Cor primária do Bootstrap */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+.datetime-calendar.tce-style  .calendar-day-wrapper.active:hover {
+    color: #000;
+    background-color: transparent ; /* Cor primária do Bootstrap */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.datetime-calendar.tce-style  .calendar-day-wrapper .calendar-day:hover {
+    background-color: #f8f9fa; /* Cor de hover seguindo o padrão Bootstrap */
+    border-color: #6c757d; /* Borda mais clara no hover */
+    color: #181616;
+
+}

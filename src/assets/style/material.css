@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.datetime-calendar {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.datetime-calendar.material-style .calendar-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
+    border-radius: 8px 8px 0 0;
+}
+
+.datetime-calendar.material-style .current-date {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #424242;
+}
+
+.datetime-calendar.material-style .today {
+    border-radius: 24px;
+    margin-right: 20px;
+    background-color: #6200ea;
+    padding: 12px 20px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.datetime-calendar.material-style .today:hover {
+    background-color: #3700b3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.datetime-calendar.material-style .today span {
+    display: none;
+}
+
+.datetime-calendar.material-style .calendar-next-prev span {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: #03dac6;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.datetime-calendar.material-style .calendar-next-prev span:hover {
+    background-color: #018786;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.datetime-calendar.material-style #prev {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.datetime-calendar.material-style #next {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.datetime-calendar.material-style .calendar-action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.datetime-calendar.material-style .calendar-month-year,
+.datetime-calendar.material-style .calendar-today,
+.datetime-calendar.material-style .calendar-next-prev {
+    display: flex;
+    align-items: center;
+}
+
+.datetime-calendar.material-style .calendar-days-of-week .day-of-week {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.datetime-calendar.material-style .calendar-day-wrapper.active .calendar-day {
+    color: #fff;
+    background-color: #6200ea;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.datetime-calendar.material-style .calendar-day-wrapper.active:hover {
+    background-color: #3700b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.datetime-calendar.material-style .calendar-day-wrapper .calendar-day:hover {
+    background-color: #eeeeee;
+    color: #424242;
+    border-radius: 50%;
+}
+
+.datetime-calendar.material-style .calendar-day-wrapper.inactive {
+    color: #bdbdbd;
+}
+
+.datetime-calendar.material-style .calendar-day-wrapper.inactive:hover {
+    background-color: transparent;
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap');
+
+* {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.datetime-calendar {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+.datetime-calendar.bootstrap-style .calendar-header {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.datetime-calendar.bootstrap-style .current-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.datetime-calendar.bootstrap-style .today {
+    border-radius: 0.25rem;
+    margin-right: 20px;
+    background-color: #0d6efd;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.datetime-calendar.bootstrap-style .today:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+.datetime-calendar.bootstrap-style .today span {
+    display: none;
+}
+
+.datetime-calendar.bootstrap-style .calendar-next-prev span {
+    width: 36px;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 1.25rem;
+    background-color: #6c757d;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.datetime-calendar.bootstrap-style .calendar-next-prev span:hover {
+    background-color: #5a6268;
+}
+
+.datetime-calendar.bootstrap-style #prev {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.datetime-calendar.bootstrap-style #next {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.datetime-calendar.bootstrap-style .calendar-action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.datetime-calendar.bootstrap-style .calendar-month-year,
+.datetime-calendar.bootstrap-style .calendar-today,
+.datetime-calendar.bootstrap-style .calendar-next-prev {
+    display: flex;
+    align-items: center;
+}
+
+.datetime-calendar.bootstrap-style .calendar-days-of-week .day-of-week {
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+}
+
+.datetime-calendar.bootstrap-style .calendar-day-wrapper.active .calendar-day {
+    color: #fff;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.datetime-calendar.bootstrap-style .calendar-day-wrapper.active:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.datetime-calendar.bootstrap-style .calendar-day-wrapper .calendar-day:hover {
+    background-color: #f8f9fa;
+    border-color: #6c757d;
+    color: #212529;
+}
+
+.datetime-calendar.bootstrap-style .calendar-day-wrapper.inactive {
+    color: #adb5bd;
+}
+
+.datetime-calendar.bootstrap-style .calendar-day-wrapper.inactive:hover {
+    background-color: transparent;
+}

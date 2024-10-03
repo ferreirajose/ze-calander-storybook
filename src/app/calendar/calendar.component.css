@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.datetime-calendar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.calendar-action-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.calendar-days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-days-of-week {
+  -webkit-padding-start: 10px;
+  padding-inline-start: 10px;
+  -webkit-padding-end: 10px;
+  padding-inline-end: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color:  gray;
+  font-size: 0.875rem;
+  line-height: 36px;
+  margin: 10px 0 15px;
+}
+
+.calendar-days-of-week .day-of-week {
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.calendar-body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.calendar-month {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.calendar-body .calendar-month .calendar-month-grid {
+  -webkit-padding-start: 10px;
+  padding-inline-start: 10px;
+  -webkit-padding-end: 10px;
+  padding-inline-end: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.calendar-body .calendar-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 60px;
+  overflow: visible;
+}
+
+.calendar-day {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  font-size: 0.875rem;
+  border-radius: 50%;
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+  -webkit-padding-end: 0px;
+  padding-inline-end: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 0;
+}
+
+.calendar-day-wrapper.inactive {
+  color: #ced4da; /* Cor cinza para dias inativos */
+}

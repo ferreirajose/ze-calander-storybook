@@ -1,0 +1,47 @@
+
+<div [ngClass]="{
+  'datetime-calendar': true,
+  'bootstrap-style': style === 'bootstrap',
+  'material-style': style === 'material',
+  'tce-style': style === 'tce',
+  'default-style': style === 'default'
+}" class="datetime-calendar">
+  <div class="calendar-header">
+      <div class="calendar-action-buttons" >
+          <div class="calendar-month-year">
+              <p data-test="current-date" data-test="current-date" class="current-date">{{ currentMonthName }} {{ currentYear }}</p>
+          </div>
+
+          <div class="calendar-today today" (click)="goToToday()">
+              <p class="today-text">Hoje</p>
+              <span class="material-symbols-rounded">calendar_today</span>
+          </div>
+
+          <div #nextPrev class="calendar-next-prev" data-test="icons">
+              <span id="prev" (click)="navigateMonth('prev')" class="nav material-symbols-rounded">chevron_left</span>
+              <span id="next" (click)="navigateMonth('next')" class="nav material-symbols-rounded">chevron_right</span>
+          </div>
+      </div>
+
+  </div>
+
+  <!-- Dias da Semana Traduzidos -->
+  <div class="calendar-days-of-week">
+    <div class="day-of-week" *ngFor="let day of daysOfWeek; trackBy: trackByWeek">{{ day }}</div>
+  </div>
+
+  <div class="calendar-body">
+    <div class="calendar-month">
+        <div class="calendar-month-grid">
+          <div class="calendar-day-wrapper"
+            [ngClass]="day.classStyle"
+            *ngFor="let day of daysInMonth; trackBy: trackByMonth">
+            <span class="calendar-day" [ngStyle]="day.styles">
+              {{ day.day }}
+            </span>
+          </div>
+        </div>
+    </div>
+</div>
+
+</div>

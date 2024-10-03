@@ -1,0 +1,11 @@
+// Import Bootstrap functions
+@import "node_modules/bootstrap/scss/functions";
+//@import "node_modules/bootstrap/scss/buttons";
+
+// Customize Bootstrap theme colors
+$theme-colors: (
+  "primary": #203AB1,
+);
+
+$body-color: #160330; // Cor base para todos as fontes
+$border-radius-lg: 0.75rem; //Exemplo de border-radius para botões, apenas nos btn-lg
